@@ -1,0 +1,22 @@
+# Function to calculate the square of the radius
+def calculate_square_of_radius(radius):
+    if radius < 0:
+        raise ValueError("Radius cannot be negative.")
+    return radius ** 2
+
+# Main function to execute the calculation
+def main():
+    try:
+        # Input the radius of the planet
+        radius = float(input("Enter the radius of the planet: "))
+        
+        # Calculate the square of the radius
+        square_of_radius = calculate_square_of_radius(radius)
+        
+        # Print the result
+        print(f"The square of the radius is: {square_of_radius}")
+    except ValueError as e:
+        print(f"Invalid input: {e}")
+
+if __name__ == "__main__":
+    main()
